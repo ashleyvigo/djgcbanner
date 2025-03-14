@@ -30,17 +30,17 @@
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    font-family: 'Graffiti', sans-serif; /* Use graffiti font */
+    font-family: 'Graffiti', sans-serif;
     font-size: 72px;
     font-weight: normal;
     letter-spacing: 5px;
     text-transform: uppercase;
     z-index: 1;
-    background: linear-gradient(90deg, red, black, red);
-    background-size: 300% 100%;
-    animation: gradientAnimation 10s linear infinite;
+    background-image: url('lightning-storm.gif'); /* Lightning storm background */
+    background-size: cover; /* Cover the banner area */
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Optional glow */
   }
 
   .banner span {
@@ -55,11 +55,6 @@
 
   @keyframes letterEntrance {
     to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes gradientAnimation {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 0; }
   }
 
   #particles-js {
