@@ -36,11 +36,11 @@
     letter-spacing: 5px;
     text-transform: uppercase;
     z-index: 1;
-    background-image: url('lightning-storm.gif'); /* Lightning storm background */
-    background-size: cover; /* Cover the banner area */
+    background-image: url('lightning.gif'); /* Lightning storm background */
+    background-size: cover;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Optional glow */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
   }
 
   .banner span {
