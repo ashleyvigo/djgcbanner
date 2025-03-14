@@ -5,12 +5,12 @@
 <style>
   @font-face {
     font-family: 'Graffiti';
-    src: url('your-graffiti-font.ttf') format('truetype'); /* Replace with your font file */
+    src: url('your-graffiti-font.ttf') format('truetype');
   }
 
   body {
     margin: 0;
-    overflow: hidden; /* Prevent scrollbars */
+    overflow: hidden;
   }
 
   #video-background {
@@ -19,8 +19,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the entire screen */
-    z-index: -2; /* Behind the banner */
+    object-fit: cover;
+    z-index: -2;
   }
 
   .banner {
@@ -35,9 +35,10 @@
     font-weight: normal;
     letter-spacing: 5px;
     text-transform: uppercase;
-    z-index: 1; /* Above the video */
-    background-image: url('lightning.gif'); /* Lightning storm background */
-    background-size: cover;
+    z-index: 1;
+    background: linear-gradient(90deg, red, black, red);
+    background-size: 300% 100%;
+    animation: gradientAnimation 10s linear infinite;
     padding: 20px;
     border-radius: 10px;
   }
@@ -46,7 +47,7 @@
     display: inline-block;
     opacity: 0;
     transform: translateY(20px);
-    animation: letterEntrance 1s forwards ease-out;
+    animation: letterEntrance 1.5s forwards ease-out, letterBounce 2s infinite alternate ease-in-out; /* Adjusted letterEntrance duration */
   }
 
   .banner span:nth-child(2) { animation-delay: 0.2s; }
@@ -56,11 +57,21 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
+  @keyframes gradientAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+  }
+
+  @keyframes letterBounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+  }
+
   #particles-js {
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Behind the banner, above video */
+    z-index: -1;
   }
 
   #smoke-overlay {
@@ -69,10 +80,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('smoke.png'); /* Replace with your smoke texture */
+    background-image: url('smoke.png');
     background-repeat: repeat;
-    opacity: 0.5; /* Adjust opacity */
-    pointer-events: none; /* Allow clicks to pass through */
+    opacity: 0.5;
+    pointer-events: none;
     z-index: 0;
   }
 
