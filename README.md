@@ -3,9 +3,14 @@
 <head>
 <title>DJ GC Opening</title>
 <style>
+  @font-face {
+    font-family: 'Graffiti';
+    src: url('your-graffiti-font.ttf') format('truetype'); /* Replace with your font file */
+  }
+
   body {
     margin: 0;
-    overflow: hidden; /* Prevent scrollbars */
+    overflow: hidden;
   }
 
   #video-background {
@@ -14,8 +19,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the entire screen */
-    z-index: -2; /* Behind the banner */
+    object-fit: cover;
+    z-index: -2;
   }
 
   .banner {
@@ -25,12 +30,12 @@
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    font-family: 'Graffiti', sans-serif;
+    font-family: 'Graffiti', sans-serif; /* Use graffiti font */
     font-size: 72px;
     font-weight: normal;
     letter-spacing: 5px;
     text-transform: uppercase;
-    z-index: 1; /* Above the video */
+    z-index: 1;
     background: linear-gradient(90deg, red, black, red);
     background-size: 300% 100%;
     animation: gradientAnimation 10s linear infinite;
@@ -61,7 +66,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Behind the banner, above video */
+    z-index: -1;
   }
 
   #smoke-overlay {
@@ -70,10 +75,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('smoke.png'); /* Replace with your smoke texture */
+    background-image: url('smoke.png');
     background-repeat: repeat;
-    opacity: 0.5; /* Adjust opacity */
-    pointer-events: none; /* Allow clicks to pass through */
+    opacity: 0.5;
+    pointer-events: none;
     z-index: 0;
   }
 
