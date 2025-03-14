@@ -10,7 +10,7 @@
 
   body {
     margin: 0;
-    overflow: hidden;
+    overflow: hidden; /* Prevent scrollbars */
   }
 
   #video-background {
@@ -19,8 +19,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -2;
+    object-fit: cover; /* Cover the entire screen */
+    z-index: -2; /* Behind the banner */
   }
 
   .banner {
@@ -35,12 +35,11 @@
     font-weight: normal;
     letter-spacing: 5px;
     text-transform: uppercase;
-    z-index: 1;
+    z-index: 1; /* Above the video */
     background-image: url('lightning.gif'); /* Lightning storm background */
     background-size: cover;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
   }
 
   .banner span {
@@ -61,7 +60,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1; /* Behind the banner, above video */
   }
 
   #smoke-overlay {
@@ -70,10 +69,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('smoke.png');
+    background-image: url('smoke.png'); /* Replace with your smoke texture */
     background-repeat: repeat;
-    opacity: 0.5;
-    pointer-events: none;
+    opacity: 0.5; /* Adjust opacity */
+    pointer-events: none; /* Allow clicks to pass through */
     z-index: 0;
   }
 
